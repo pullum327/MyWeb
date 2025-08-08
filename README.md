@@ -1,19 +1,14 @@
-<p align="center"><img src="/public/images/work1.jpg" /></p>
+<p align="center"><img src="/public/images/work.jpg" /></p>
 
 <h1 align="center">template-web</h1>
 
-This template should help get you started developing with React in Next.js.
 <br>
-这个模板应该有助于你开始在 Next.js 中使用 React 进行开发。
+使用模板在 Next.js 中使用 React 進行開發。
 
-> [!NOTE]
-> If you think `TemplateWeb` is helpful to you, or you like my project, please give my project a ⭐️ on GitHub. Your support is the driving force for me to continue to improve! Thank you for your support! If there are any areas that are not good enough, please raise an issue and I will improve it!
-> <br>
-> 如果你认为 TemplateWeb 对你有帮助，或者你喜欢我的项目，请给我的项目一个 ⭐️ 在 GitHub 上。您的支持是我不断改进的动力！感谢您的支持！如果有什么地方不够好，请提出 issue，我会改进的！
 
 ## Introduction
 
-该模板使用 Next.js + React + Prisma + Pusher 搭建，配置了请求封装、Prisma 连接、Pusher 连接、主题切换、移动端适配、封装了对应的 svg-icon 组件、可以通过使用`svgIcon name="..."`引入对应的 svg 图标，对应[Svg 图标预设](https://yesicon.app/logos/?lang=zh-hans)，希望这个可以作为您的初始化项目模板，供您拓展和自定义属于您的项目。
+该模板使用 Next.js + React + Prisma + Pusher 搭建
 
 ## Node Version
 
@@ -43,10 +38,6 @@ pnpm 版本: 8.8.0
 - `service`
 
   - 请求方法，接口方法。
-
-- `src/blogs`
-
-  - 存放 md 文件，项目会读取这个目录作为文章列表显示。
 
 - `src/components`
 
@@ -88,29 +79,11 @@ pnpm 版本: 8.8.0
 
   - 获取评论接口代码。
 
-- `src/pages/api/reactions.ts`
-
-  - 获取文章点赞数接口代码。
-
-- `src/pages/api/chat`
-
-  - 聊天室接口代码。
-
-- `src/data/works.ts`
-
-  - 作品数据。
 
 - `src/data/tagConfigs.ts`
 
   - 标签配置数据。
 
-- `src/data/experience.ts`
-
-  - 经历数据。
-
-- GitHubHeatmap 使用说明：
-  - `GitHubHeatmap username="996wuxian" year={2025}`
-  - 热力图只需要在这替换你的 username 即可
 
 ## vercel 部署说明
 
