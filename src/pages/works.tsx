@@ -76,7 +76,7 @@ export default function Works() {
     });
   };
 
-  // 总页数（包括联系页面）
+  // 总页数（）
   const totalSections = works.length + 1;
 
   // 打开图片弹窗
@@ -90,11 +90,6 @@ export default function Works() {
     setIsImageModalOpen(false);
   };
 
-  // 打开详情抽屉
-  const openDrawer = (work: Work) => {
-    setSelectedWork(work);
-    setIsDrawerOpen(true);
-  };
 
   // 关闭详情抽屉
   const closeDrawer = () => {
@@ -102,23 +97,12 @@ export default function Works() {
     setSelectedWork(null);
   };
 
-  const [isQQModalOpen, setIsQQModalOpen] = useState(false);
-
-  // QQ按钮点击事件
-  const handleQQClick = () => {
-    setIsQQModalOpen(true);
-  };
-
-  // 关闭QQ弹窗
-  const closeQQModal = () => {
-    setIsQQModalOpen(false);
-  };
 
   return (
     <>
       <Head>
-        <title>作品集 - wuxian&apos;s web</title>
-        <meta name="description" content="wuxian的作品集展示页面" />
+        <title>作品集 - LeungChunHei&apos;s web</title>
+        <meta name="description" content="LeungChunHei的作品集展示頁面" />
       </Head>
 
       {/* 图片弹窗 */}
@@ -132,15 +116,7 @@ export default function Works() {
         imageWidth={1000}
       />
 
-      <ImageModal
-        isOpen={isQQModalOpen}
-        onClose={closeQQModal}
-        title="QQ联系方式"
-        images={["/images/qq.jpg"]}
-        enableDanmaku={false}
-        imageWidth={300}
-        imageHeight={300}
-      />
+      
 
       {/* 详情抽屉 */}
       {isDrawerOpen && (
@@ -488,65 +464,6 @@ export default function Works() {
                     </div>
                   </div>
 
-                  {!work.title.includes("wuxian") ? (
-                    <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2 md:pt-4">
-                      {/* 查看详情按钮 */}
-                      <button
-                        onClick={() => openDrawer(work)}
-                        className="bg-gradient-to-br from-[#1b2c55] to-[#3d85a9] hover:from-[#2a3d66] hover:to-[#4e96ba] text-white py-2.5 md:py-3 px-4 md:px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium cursor-pointer text-sm md:text-base"
-                      >
-                        <SvgIcon
-                          name="docs"
-                          width={16}
-                          height={16}
-                          color="#fff"
-                          className="md:w-[18px] md:h-[18px]"
-                        />
-                        查看详情
-                      </button>
-
-                      {/* 原有的项目链接按钮 */}
-                      {!work.title.includes("wuxian") && work.link !== "#" && (
-                        <>
-                          <button
-                            onClick={() => window.open(work.link, "_blank")}
-                            className="bg-[rgba(0,0,0,.5)] hover:bg-[rgba(0,0,0,.7)] text-white py-2.5 md:py-3 px-4 md:px-6 rounded-lg transition-all duration-300 border border-[rgba(255,255,255,0.2)] backdrop-blur-sm flex items-center justify-center gap-2 cursor-pointer text-sm md:text-base"
-                          >
-                            <SvgIcon
-                              name="github"
-                              width={16}
-                              height={16}
-                              color="#fff"
-                              className="md:w-[18px] md:h-[18px]"
-                            />
-                            查看项目
-                          </button>
-                        </>
-                      )}
-
-                      {!work.title.includes("wuxian") && work.download_url && (
-                        <>
-                          <button
-                            onClick={() =>
-                              window.open(work.download_url, "_blank")
-                            }
-                            className="bg-[rgba(0,0,0,.5)] hover:bg-[rgba(0,0,0,.7)] text-white py-2.5 md:py-3 px-4 md:px-6 rounded-lg transition-all duration-300 border border-[rgba(255,255,255,0.2)] backdrop-blur-sm flex items-center justify-center gap-2 cursor-pointer text-sm md:text-base"
-                          >
-                            <SvgIcon
-                              name="down"
-                              width={16}
-                              height={16}
-                              color="#fff"
-                              className="md:w-[18px] md:h-[18px]"
-                            />
-                            前往下载
-                          </button>
-                        </>
-                      )}
-                    </div>
-                  ) : (
-                    ""
-                  )}
                 </div>
 
                 {/* 项目图片 */}
@@ -576,71 +493,10 @@ export default function Works() {
             </section>
           ))}
 
-          {/* 联系页面 */}
-          <section
-            className="h-screen flex items-center justify-center px-4 md:px-8"
-            style={{ scrollSnapAlign: "start" }}
-          >
-            <div className="text-center max-w-2xl mx-auto space-y-6 md:space-y-8">
-              <div className="space-y-3 md:space-y-4">
-                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#fff] text-shadow-sm">
-                  感兴趣的
-                  <span className="bg-gradient-to-br from-[#1b2c55] to-[#3d85a9] bg-clip-text text-transparent">
-                    项目？
-                  </span>
-                </h2>
-                <p className="text-sm md:text-lg text-[rgba(255,255,255,0.8)] leading-relaxed">
-                  如果您对我的作品感兴趣，或者有合作意向，欢迎联系我！
-                </p>
-              </div>
-
-              <div className="flex justify-center gap-4 md:gap-6">
-                <button
-                  onClick={() =>
-                    window.open("https://github.com/996wuxian", "_blank")
-                  }
-                  className="bg-[rgba(0,0,0,.5)] hover:bg-[rgba(0,0,0,.7)] rounded-xl p-2 md:p-3 cursor-pointer transition-all duration-300 backdrop-blur-sm border border-[rgba(255,255,255,0.2)] group"
-                >
-                  <SvgIcon
-                    name="github"
-                    width={24}
-                    height={24}
-                    color="#fff"
-                    className="md:w-[30px] md:h-[30px]"
-                  />
-                </button>
-                <button
-                  onClick={handleQQClick}
-                  className="bg-[rgba(0,0,0,.5)] hover:bg-[rgba(0,0,0,.7)] rounded-xl p-2 md:p-3 cursor-pointer transition-all duration-300 backdrop-blur-sm border border-[rgba(255,255,255,0.2)] group"
-                >
-                  <SvgIcon
-                    name="qq"
-                    width={24}
-                    height={24}
-                    color="#fff"
-                    className="md:w-[30px] md:h-[30px]"
-                  />
-                </button>
-              </div>
-            </div>
-          </section>
+         
         </div>
 
-        <Link
-          href="/blog"
-          className="fixed bottom-4 md:bottom-8 right-4 md:right-8 z-10"
-        >
-          <button className="bg-[rgba(0,0,0,.5)] hover:bg-[rgba(0,0,0,.7)] rounded-[5px] p-[6px] md:p-[8px] cursor-pointer transition-all duration-200 flex items-center gap-1 md:gap-2 text-white backdrop-blur-sm">
-            <span className="text-xs md:text-sm">文章</span>
-            <SvgIcon
-              name="right"
-              width={16}
-              height={16}
-              color="#fff"
-              className="md:w-5 md:h-5"
-            />
-          </button>
-        </Link>
+      
       </div>
     </>
   );

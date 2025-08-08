@@ -19,12 +19,12 @@ export interface WorkItem {
 // 作品数据
 export const worksData: WorkItem[] = [
   {
-    title: "wuxian's web",
+    title: "LeungChunHei's web",
     description:
-      "基于Next.js开发的个人介绍网站，简单介绍了我自己个儿，歌和视频都很有品！！！！。",
-    image: "/images/work1.jpg",
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      "基於Next.js開發的個人介紹網站。使用https://github.com/996wuxian/template-web修改而成",
+    image: "/images/work.jpg",
+    tech: ["Next.js", "React", "Tailwind CSS"],
     link: "#",
-    features: ["个人介绍", "作品集", "喜好", "留言"],
+    features: ["個人介紹", "作品集", "紀錄知識"],
   },
 ];
