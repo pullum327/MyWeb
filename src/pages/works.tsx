@@ -360,7 +360,7 @@ export default function Works() {
               color="#fff"
               className="md:w-5 md:h-5"
             />
-            <span className="text-xs md:text-sm">返回首页</span>
+            <span className="text-xs md:text-sm">返回首頁</span>
           </Link>
         </div>
 
