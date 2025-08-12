@@ -196,7 +196,7 @@ export default function Home() {
               {/* 左侧/中间区域 */}
               <div className="flex order-2 md:order-1 w-full md:w-auto">
                 <div className="flex flex-col gap-[10px] w-full md:w-[250px]">
-                  <div className="flex gap-[10px] flex-col flex-row">
+                  <div className="flex gap-[10px] flex-col">
                     <div className="bg-[rgba(0,0,0,.3)] rounded-[5px] p-[10px] text-[#fff] text-[14px] gap-[10px] flex flex-col flex-1">
                       <div className="flex items-center gap-[5px]">
                         <SvgIcon
