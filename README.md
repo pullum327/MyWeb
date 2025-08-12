@@ -1,146 +1,124 @@
 <p align="center"><img src="/public/images/work1.jpg" /></p>
 
-<h1 align="center">template-web</h1>
-
-This template should help get you started developing with React in Next.js.
-<br>
-这个模板应该有助于你开始在 Next.js 中使用 React 进行开发。
-
-> [!NOTE]
-> If you think `TemplateWeb` is helpful to you, or you like my project, please give my project a ⭐️ on GitHub. Your support is the driving force for me to continue to improve! Thank you for your support! If there are any areas that are not good enough, please raise an issue and I will improve it!
-> <br>
-> 如果你认为 TemplateWeb 对你有帮助，或者你喜欢我的项目，请给我的项目一个 ⭐️ 在 GitHub 上。您的支持是我不断改进的动力！感谢您的支持！如果有什么地方不够好，请提出 issue，我会改进的！
-
-## Introduction
-
-该模板使用 Next.js + React + Prisma + Pusher 搭建，配置了请求封装、Prisma 连接、Pusher 连接、主题切换、移动端适配、封装了对应的 svg-icon 组件、可以通过使用`svgIcon name="..."`引入对应的 svg 图标，对应[Svg 图标预设](https://yesicon.app/logos/?lang=zh-hans)，希望这个可以作为您的初始化项目模板，供您拓展和自定义属于您的项目。
-
 ## Node Version
 
 node 版本: v20.10.0
 pnpm 版本: 8.8.0
 
-## 运行方式
+## 運作方式
 
-1. 下载这个项目
+1. 下載這個項目
 2. run `pnpm i`
 3. run `pnpm dev`
 
-## 目录说明
+## 目錄說明
 
 - `prisma/schema.prisma`
 
-  - Prisma 的配置文件，用于定义数据库模型。
+ - Prisma 的配置文件，用於定義資料庫模型。
 
 - `public`
 
-  - 静态资源目录，用于存放静态资源。
+ - 靜態資源目錄，用於存放靜態資源。
 
 - `scripts`
 
-  - 脚本目录，用于存放脚本。
+ - 腳本目錄，用於存放腳本。
 
 - `service`
 
-  - 请求方法，接口方法。
+ - 請求方法，介面方法。
 
 - `src/blogs`
 
-  - 存放 md 文件，项目会读取这个目录作为文章列表显示。
+ - 存放 md 文件，項目會讀取這個目錄作為文章清單顯示。
 
 - `src/components`
 
-  - 存放组件，包含弹窗、热力图等。
+ - 存放組件，包含彈跳窗、熱力圖等。
 
 - `src/contexts/ThemeContext.tsx`
 
-  - 主题上下文，用于切换主题。
+ - 主題上下文，用於切換主題。
 
 - `src/lib/prisma.ts`
 
-  - Prisma 的声明文件。
+ - Prisma 的聲明文件。
 
 - `src/lib/pusher.ts`
 
-  - Pusher 的声明文件。
+ - Pusher 的聲明文件。
 
 - `src/pages_app.tsx`
 
-  - Next.js 的入口文件。
+ - Next.js 的入口檔。
 
 - `src/pages/index.tsx`
 
-  - 首页代码。
+ - 首頁代碼。
 
 - `src/pages/works.tsx`
 
-  - 作品页面代码。
+ - 作品頁面代碼。
 
 - `src/pages/blog.tsx`
 
-  - 文章集页面代码。
+ - 文章集頁面代碼。
 
 - `src/pages/chat.tsx`
 
-  - 聊天室页面代码。
+ - 聊天室頁面代碼。
 
 - `src/pages/api/comments.ts`
 
-  - 获取评论接口代码。
+ - 取得評論介面代碼。
 
 - `src/pages/api/reactions.ts`
 
-  - 获取文章点赞数接口代码。
+ - 取得文章按讚數介面代碼。
 
 - `src/pages/api/chat`
 
-  - 聊天室接口代码。
+ - 聊天室介面代碼。
 
 - `src/data/works.ts`
 
-  - 作品数据。
+ - 作品數據。
 
 - `src/data/tagConfigs.ts`
 
-  - 标签配置数据。
+ - 標籤配置資料。
 
 - `src/data/experience.ts`
 
-  - 经历数据。
+ - 經歷數據。
 
-- GitHubHeatmap 使用说明：
-  - `GitHubHeatmap username="996wuxian" year={2025}`
-  - 热力图只需要在这替换你的 username 即可
+- GitHubHeatmap 使用說明：
+ - `GitHubHeatmap username="996wuxian" year={2025}`
+ - 熱力圖只需要在這替換你的 username 即可
 
-## vercel 部署说明
+## vercel 部署說明
 
-1. 创建一个 vercel 账号(vercel 官网:https://vercel.com/)
-2. 连接你的 github 仓库
-3. 配置环境变量
+1. 建立一個 vercel 帳號(vercel 官網:https://vercel.com/)
+2. 連結你的 github 倉庫
+3. 配置環境變數
 4. 部署
-5. 创建一个 neon 数据库(neon 官网:https://neon.com/)
-6. 配置数据库连接字符串到 vercel 的环境变量中(一般将数据库跟项目进行连接后，重新部署就可以有环境变量了)
-7. 将 DIRECT_URL 也补充到环境变量中
+5. 建立一個 neon 資料庫(neon 官網:https://neon.com/)
+6. 配置資料庫連接字串到 vercel 的環境變數(一般將資料庫跟專案進行連接後，重新部署就可以有環境變數了)
+7. 將 DIRECT_URL 也補充到環境變數中
 
-## Prisma 连接说明
+## Prisma 連接說明
 
-1. 在项目根目录的.env 文件中将 vercel 创建的 neon 数据库连接字符串配置如下 neon 的连接字段:
-   DATABASE_URL="your-connection-string"
-   DIRECT_URL="your-connection-string"
+1. 在專案根目錄的.env 檔案中將 vercel 建立的 neon 資料庫連接字串配置如下 neon 的連接欄位:
+ DATABASE_URL="your-connection-string"
+ DIRECT_URL="your-connection-string"
 
-2. 运行 `pnpm run push-db` 命令，将数据库结构推送到 neon 上
-3. 运行 `pnpm run generate` 命令，生成新的客户端代码
+2. 執行 `pnpm run push-db` 指令，將資料庫結構推送到 neon 上
+3. 執行 `pnpm run generate` 指令，產生新的客戶端程式碼
 
-## Pusher 连接说明
+## Pusher 連線說明
 
-1. 创建一个 pusher 账号(pusher 官网:https://pusher.com/)
-2. 创建一个 pusher 应用
-3. 配置 pusher 应用的连接字段填入.env 文件中
-4. 将项目根目录的.env 文件的字段添加到 vercel 的环境变量中
-
-## 注意
-
-1. 如果修改表结构，则需要重新运行 `pnpm run push-db` 命令，将数据库结构推送到 neon 上
-2. 上传到您的 github 仓库时，请将.env 文件添加到.gitignore 文件中
-3. 这个只是基础模板，各位发挥自己的想象创造力打造吧！
-4. 如果遇到不懂的，请在 qq 群内联系我: 916088073
+1. 建立一個 pusher 帳號(pusher 官網:https://pusher.com/)
+2. 建立一個 pusher 應用
+3. 設定 pusher 應用程式的連線欄位填入.env 檔案中
+4. 將項目根目錄的.env 檔案的欄位加入到 vercel 的環境變數中
