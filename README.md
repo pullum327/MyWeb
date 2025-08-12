@@ -1,4 +1,4 @@
-<p align="center"><img src="/public/images/work1.jpg" /></p>
+<p align="center"><img src="/public/images/work.jpg" /></p>
 
 ## Node Version
 
