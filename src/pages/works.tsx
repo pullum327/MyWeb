@@ -173,7 +173,7 @@ export default function Works() {
                   {/* 技术栈 */}
                   <div className="space-y-4">
                     <h3 className="text-lg md:text-xl font-semibold text-white">
-                      技术栈
+                      技術線
                     </h3>
                     <div className="flex flex-wrap gap-2 md:gap-3">
                       {selectedWork.tech.map((tech: string, index: number) => (
@@ -432,7 +432,7 @@ export default function Works() {
                   {/* 技术栈 */}
                   <div className="space-y-2 md:space-y-3">
                     <h3 className="text-base md:text-lg font-semibold text-[#fff]">
-                      技术栈
+                      技術線
                     </h3>
                     <div className="flex flex-wrap gap-2 md:gap-3">
                       {work.tech.map((tech, techIndex) => (
